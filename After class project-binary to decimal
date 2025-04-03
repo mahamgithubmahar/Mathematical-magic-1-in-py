@@ -1,0 +1,10 @@
+def binary_to_decimal(binary):
+    decimal = 0
+    for i in range(len(binary)):
+        digit = int(binary[i])
+        decimal += digit * (2 ** (len(binary) - i - 1))
+    return decimal
+
+binary = input("Enter a binary number: ")
+decimal_value = binary_to_decimal(binary)
+print("Decimal value:", decimal_value)
